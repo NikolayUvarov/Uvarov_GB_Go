@@ -23,6 +23,12 @@ type Auto struct {
 	SeatsNum uint
 }
 
+//AutoPromoted test
+type AutoPromoted struct {
+	DasAuto
+	SeatsNum uint
+}
+
 func main() {
 	fmt.Println("Разные структуры")
 	carFiat := Auto{props: DasAuto{Brand: "Fiat 310", Year: 1950, LoadSize: 0.5}, SeatsNum: 4}
@@ -36,4 +42,14 @@ func main() {
 
 	lorryVolvo.WheelsCount--
 	fmt.Println(lorryVolvo)
+
+	carPromoted2 := AutoPromoted{DasAuto:DasAuto{Brand: "Volvo", Year: 2005, LoadSize: 30}, SeatsNum: 3}
+	var carPromoted AutoPromoted
+	carPromoted.DasAuto.Brand="1000"
+	//carPromoted.Brand="10"
+	
+	
+	fmt.Println(carPromoted)
+	fmt.Println(carPromoted2)
+
 }

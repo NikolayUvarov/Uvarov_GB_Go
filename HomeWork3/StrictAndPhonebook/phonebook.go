@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 )
 
-func main() {
+func main_() {
 	addressBook := make(map[string][]int)
 
 	addressBook["Alex"] = []int{89996543210}
